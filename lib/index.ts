@@ -4,26 +4,31 @@ export function getCoefficient(_string1: string, _string2: string): any {
         let _longString: string;
         let _intersection = 0;
         let _coefficient: number;
-        _string1 = _string1.toLowerCase();
-        _string2 = _string2.toLowerCase();
-        _string1 = _string1.replace(/[^a-z0-9]/g, "");
-        _string2 = _string2.replace(/[^a-z0-9]/g, "");
-        
-        if(_string1.length < _string2.length) {
-            _shortString = _string1;
-            _longString = _string2;
-        } else {
-            _shortString = _string2;	
-            _longString = _string1;
-        }
-    
-        for (var i = 0; i < _shortString.length; i++) {
-            if(_longString.includes(_shortString[i])){
-                _intersection++;
+        if(_string1 && _string2) {
+            _string1 = _string1.toLowerCase();
+            _string2 = _string2.toLowerCase();
+            _string1 = _string1.replace(/[^a-z0-9]/g, "");
+            _string2 = _string2.replace(/[^a-z0-9]/g, "");
+            
+            if(_string1.length < _string2.length) {
+                _shortString = _string1;
+                _longString = _string2;
+            } else {
+                _shortString = _string2;	
+                _longString = _string1;
             }
+        
+            for (var i = 0; i < _shortString.length; i++) {
+                if(_longString.includes(_shortString[i])){
+                    _intersection++;
+                }
+            }
+            _coefficient = _intersection / (Math.sqrt(_longString.length * _shortString.length));
+            return _coefficient;
+        } else {
+            return null;
         }
-        _coefficient = _intersection / (Math.sqrt(_longString.length * _shortString.length));
-        return _coefficient;
+        
     } catch (error) {
         return error;
     }
