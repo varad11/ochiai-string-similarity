@@ -1,0 +1,49 @@
+{
+  "name": "ochiai-string-similarity",
+  "description": "Finds measure of similarity between two strings using Ochiai coefficient.",
+  "main": "dist/index.js",
+  "authors": [
+    "Varad Shevade"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ochihai",
+    "otsuka",
+    "barkman",
+    "distance",
+    "coefficient",
+    "algo",
+    "algorithm",
+    "string",
+    "strings",
+    "difference",
+    "diff",
+    "similar",
+    "similarity",
+    "compare",
+    "comparison",
+    "match",
+    "matching",
+    "string",
+    "standard",
+    "utility",
+    "method",
+    "text",
+    "manipulation"
+  ],
+  "homepage": "https://github.com/varad11/ochiai-string-similarity",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typescript": "3.4.5"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "6.1.4"
+  }
+}
