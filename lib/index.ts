@@ -4,7 +4,7 @@ export function getCoefficient(_string1: string, _string2: string): any {
         let _longString: string;
         let _intersection = 0;
         let _coefficient: number;
-        if(_string1 && _string2) {
+        if((_string1 && _string2) && ((typeof _string1 === 'string') && (typeof _string2 === 'string'))) {
             _string1 = _string1.toLowerCase();
             _string2 = _string2.toLowerCase();
             _string1 = _string1.replace(/[^a-z0-9]/g, "");
@@ -27,8 +27,7 @@ export function getCoefficient(_string1: string, _string2: string): any {
             return _coefficient;
         } else {
             return null;
-        }
-        
+        }        
     } catch (error) {
         return error;
     }

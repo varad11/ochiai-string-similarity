@@ -11,4 +11,24 @@ describe('OchiaiCoefficient test', () => {
         var result = index.getCoefficient('fdH&tr', 'geI*us');
         expect(result).to.equal(0.0);
     });
+
+    it('should return null', () => {
+        var result = index.getCoefficient('', '');
+        expect(result).to.equal(null);
+    });
+
+    it('should return null', () => {
+        var result = index.getCoefficient('');
+        expect(result).to.equal(null);
+    });
+
+    it('should return null', () => {
+        var result = index.getCoefficient('', 'hello');
+        expect(result).to.equal(null);
+    });
+
+    it('should return null', () => {
+        var result = index.getCoefficient(1024, '256');
+        expect(result).to.equal(null);
+    });
 });
