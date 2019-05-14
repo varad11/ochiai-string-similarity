@@ -4,7 +4,6 @@ Finds measure of similarity between two strings using Ochiai coefficient.
 ## Installation 
 ```sh
 npm install ochiai-string-similarity --save
-yarn add ochiai-string-similarity
 bower install ochiai-string-similarity --save
 ```
 
